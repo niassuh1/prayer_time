@@ -36,6 +36,27 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
 
+  # Making HTTP requests
+  http: ^0.13.5
+
+  # Locator
+  geolocator: ^9.0.2
+
+  # Functional Programming
+  dartz: ^0.10.1
+
+  # Objects equality
+  equatable: ^2.0.5
+
+  # State management
+  flutter_riverpod: ^2.2.0
+
+  # Database
+  hive: ^2.2.3
+
+  # Internet connection
+  internet_connection_checker: ^1.0.0+1
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
