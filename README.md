@@ -7,6 +7,11 @@
 ## Prototype UI Design
 ![UI](./UI.png) 
 
+## Primary Libraries used
+- Hive (Storage)
+- Riverpod (State management)
+- Freezed (Modelling)
+
 ## Features
 - ~~Automatically find location of user.~~ ✅
 - ~~Manually search for another city.~~ ✅
