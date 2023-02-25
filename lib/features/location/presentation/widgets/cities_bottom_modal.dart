@@ -16,8 +16,6 @@ class CitiesBottomModal extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    AsyncValue<Either<Failure, List<String>>> favoriteCities = ref.watch(favoriteCitiesProvider);
-
     return Column(
       children: [
         const Padding(
