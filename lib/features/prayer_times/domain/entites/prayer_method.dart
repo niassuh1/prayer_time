@@ -1,0 +1,15 @@
+enum PrayerMethod {
+  shiaIthnaAnsari,
+  universityofIslamicSciencesKarachi,
+  islamicSocietyofNorthAmerica,
+  ummAlQuraUniversityMakkah,
+  egyptianGeneralAuthorityofSurvey,
+  instituteofGeophysicsUniversityofTehran,
+  gulfRegion,
+  kuwait,
+  qatar,
+  majlisUgamaIslamSingapuraSingapore,
+  unionOrganizationislamicdeFrance,
+  turkey,
+  spiritualAdministrationofMuslimsofRussia,
+}

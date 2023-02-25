@@ -5,6 +5,7 @@ import 'package:prayer_time/core/layout/app_colors.dart';
 import 'package:prayer_time/core/layout/app_text_theme.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:prayer_time/core/local_hive_boxes.dart';
 import 'package:prayer_time/core/screens/home_screen.dart';
 import 'package:prayer_time/features/location/data/datasource/location_local_datasource.dart';
 import 'package:prayer_time/features/location/data/respository/location_repository_impl.dart';
@@ -13,8 +14,8 @@ import 'package:prayer_time/features/location/presentation/widgets/location_menu
 
 void main() async {
   await Hive.initFlutter();
-  await Hive.openBox('preferred_city');
-  await Hive.openBox('favorite_cities');
+  await Hive.openBox(LocalHiveBoxes.PREFERRED_CITY);
+  await Hive.openBox(LocalHiveBoxes.FAVORITE_CITIES);
   WidgetsFlutterBinding.ensureInitialized();
   runApp(ProviderScope(child: const MyApp()));
 }

@@ -9,6 +9,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      endDrawer: Drawer(child: Container(), width: 220),
       body: CustomScrollView(
         slivers: [
           SliverToBoxAdapter(

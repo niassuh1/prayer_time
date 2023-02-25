@@ -5,6 +5,7 @@ import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:hive_flutter/adapters.dart';
 import 'package:prayer_time/core/error/failure.dart';
+import 'package:prayer_time/core/local_hive_boxes.dart';
 import 'package:prayer_time/features/location/data/cities.dart';
 
 import 'package:prayer_time/features/location/presentation/controllers/city_controller.dart';
@@ -25,7 +26,7 @@ class CitiesBottomModal extends ConsumerWidget {
           ),
         ),
         ValueListenableBuilder(
-          valueListenable: Hive.box('favorite_cities').listenable(),
+          valueListenable: Hive.box(LocalHiveBoxes.FAVORITE_CITIES).listenable(),
           builder: (BuildContext context, Box<dynamic> value, Widget? child) {
             List<String> favoriteCitiesList = value.get('cities') ?? [];
             return Expanded(

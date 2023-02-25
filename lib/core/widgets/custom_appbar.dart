@@ -10,6 +10,8 @@ import 'package:prayer_time/core/layout/app_spacing.dart';
 import 'package:prayer_time/core/layout/app_text_theme.dart';
 import 'package:prayer_time/features/location/presentation/widgets/location_menu.dart';
 
+final GlobalKey<ScaffoldState> _key = GlobalKey();
+
 class CustomAppbar extends StatelessWidget {
   const CustomAppbar({super.key});
 
@@ -36,7 +38,9 @@ class CustomAppbar extends StatelessWidget {
                     children: [
                       LocationMenu(),
                       IconButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Scaffold.of(context).openEndDrawer();
+                        },
                         icon: Icon(LineIcons.bars),
                       ),
                     ],
