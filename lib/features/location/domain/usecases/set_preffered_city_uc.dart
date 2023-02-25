@@ -3,11 +3,11 @@ import 'package:geocoding/geocoding.dart';
 import 'package:prayer_time/core/error/failure.dart';
 import 'package:prayer_time/features/location/domain/repostistory/location_repostiory.dart';
 
-class SaveFavoriteLocation {
+class SetPrefferedCityUsecase {
   final LocationRepostiory locationRepostiory;
-  SaveFavoriteLocation(this.locationRepostiory);
+  SetPrefferedCityUsecase(this.locationRepostiory);
 
   Future<Either<Failure, void>> call(String city) async {
-    return await locationRepostiory.saveFavoriteCity(city);
+    return await locationRepostiory.setPreferredCity(city);
   }
 }

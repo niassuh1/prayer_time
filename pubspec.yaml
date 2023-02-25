@@ -38,6 +38,7 @@ dependencies:
 
   # Making HTTP requests
   http: ^0.13.5
+  line_icons: ^2.0.1
 
   # Locator
   geolocator: ^9.0.2
