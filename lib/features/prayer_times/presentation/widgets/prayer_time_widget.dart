@@ -29,7 +29,7 @@ class PrayerTimeWidget extends ConsumerWidget {
         print(error);
         return Text('error');
       },
-      loading: () => Text('Loading'),
+      loading: () => CircularProgressIndicator(),
     );
   }
 }

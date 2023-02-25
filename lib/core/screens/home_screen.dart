@@ -55,7 +55,7 @@ class HomeScreenAppbar extends StatelessWidget {
       leadingWidth: MediaQuery.of(context).size.width / 2,
       leading: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.only(top: 16, left: 8),
+          padding: const EdgeInsets.only(top: 20, left: 8),
           child: LocationMenu(),
         ),
       ),

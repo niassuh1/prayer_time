@@ -11,11 +11,14 @@ import 'package:prayer_time/features/location/data/datasource/location_local_dat
 import 'package:prayer_time/features/location/data/respository/location_repository_impl.dart';
 import 'package:prayer_time/features/location/presentation/controllers/city_controller.dart';
 import 'package:prayer_time/features/location/presentation/widgets/location_menu.dart';
+import 'package:prayer_time/features/notify_prayer/domain/entities/local_notification.dart';
 
 void main() async {
   await Hive.initFlutter();
   await Hive.openBox(LocalHiveBoxes.PREFERRED_CITY);
   await Hive.openBox(LocalHiveBoxes.FAVORITE_CITIES);
+  await Hive.openBox(LocalHiveBoxes.PRAYER_TIME_METHOD);
+
   WidgetsFlutterBinding.ensureInitialized();
   runApp(ProviderScope(child: const MyApp()));
 }

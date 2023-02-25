@@ -17,17 +17,22 @@ class PrayerTimeDate extends ConsumerWidget {
               ref.read(dateTimeProvider.notifier).state = DateTime(date.year, date.month - 1, date.day);
             },
             icon: Icon(Icons.chevron_left)),
-        Column(
-          children: [
-            Text(
-              getMonth(ref.watch(dateTimeProvider).month),
-              style: AppTextTheme.h3!.copyWith(fontWeight: FontWeight.w700),
-            ),
-            Text(
-              ref.watch(dateTimeProvider).year.toString(),
-              style: AppTextTheme.bodyLarge,
-            ),
-          ],
+        GestureDetector(
+          onDoubleTap: () {
+            ref.read(dateTimeProvider.notifier).state = DateTime.now();
+          },
+          child: Column(
+            children: [
+              Text(
+                getMonth(ref.watch(dateTimeProvider).month),
+                style: AppTextTheme.h3!.copyWith(fontWeight: FontWeight.w700),
+              ),
+              Text(
+                ref.watch(dateTimeProvider).year.toString(),
+                style: AppTextTheme.bodyLarge,
+              ),
+            ],
+          ),
         ),
         IconButton(
             onPressed: () {
