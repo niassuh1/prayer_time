@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
-import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:hive_flutter/adapters.dart';
@@ -32,7 +31,8 @@ class HomeScreen extends ConsumerWidget {
               PrayerTimeDate(),
               AppSpacing.kVertical9,
               ValueListenableBuilder(
-                valueListenable: Hive.box(LocalHiveBoxes.PREFERRED_CITY).listenable(),
+                valueListenable:
+                    Hive.box(LocalHiveBoxes.PREFERRED_CITY).listenable(),
                 builder: (context, value, child) => PrayerTimeWidget(),
               ),
             ]),

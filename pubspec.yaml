@@ -63,9 +63,6 @@ dependencies:
   # To deal with svg assets
   flutter_svg: ^2.0.2
 
-  # Create notifications
-  flutter_local_notifications: ^13.0.0
-
   # Freezed packages
   freezed_annotation: ^2.2.0
   json_annotation: ^4.8.0

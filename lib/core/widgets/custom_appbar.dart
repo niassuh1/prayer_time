@@ -1,7 +1,6 @@
 import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:hive_flutter/adapters.dart';
@@ -18,7 +17,8 @@ class CustomAppbar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(borderRadius: BorderRadius.vertical(bottom: Radius.circular(32))),
+      decoration: BoxDecoration(
+          borderRadius: BorderRadius.vertical(bottom: Radius.circular(32))),
       clipBehavior: Clip.antiAlias,
       child: Stack(
         clipBehavior: Clip.antiAlias,
